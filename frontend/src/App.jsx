@@ -7,7 +7,7 @@ function App() {
 
   // Fetch items from backend
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("http://localhost:3000/items")
       .then(res => res.json())
       .then(data => setItems(data));
   }, []);
@@ -15,7 +15,7 @@ function App() {
   // Save new item
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/save", {
+    const res = await fetch("http://localhost:3000/save", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, link })
@@ -28,7 +28,7 @@ function App() {
 
   // Delete item
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:5000/items/${id}`, { method: "DELETE" });
+    await fetch(`http://localhost:3000/items/${id}`, { method: "DELETE" });
     setItems(items.filter(item => item.id !== id));
   };
 
