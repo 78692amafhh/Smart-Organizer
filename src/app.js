@@ -38,7 +38,7 @@ app.delete("/items/:id", (req, res) => {
   res.json({ success: true });
 });
 
-app.use("*", (req, res) => {
+app.use("*name", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public/index.html"));
 });
 
