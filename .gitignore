@@ -1,25 +1,14 @@
-# Dependencies
-node_modules
-
-# Frontend folder
+node_modules/
 frontend/
-
-# Archive files
+.env
+.env.local
+.env.production
+.DS_Store
 *.zip
 *.rar
 *.7z
 *.tar.gz
 *.gz
-
-# Environment files
-.env
-.env.local
-.env.production
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Logs
 *.log
 npm-debug.log*
+Thumbs.db
